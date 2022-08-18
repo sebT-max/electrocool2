@@ -1,0 +1,823 @@
+/* import fonts from fonts.css file */
+@import url(./fonts.css);
+
+
+/* css variables */
+@import url(./partials/_variables.css);
+
+/* import global styling */
+@import url(./partials/_global.css);
+
+
+@charset "UTF-8";
+.navigation {
+  height: 70px;
+  background: linear-gradient(90deg, #4458dc 0%, #854fee 100%);
+  text-transform:uppercase;
+}
+
+.bgc-white {
+    background-color: white;
+}
+
+.brand {
+  position: absolute;
+  padding-left: 20px;
+  float: left;
+  line-height: 70px;
+  text-transform: uppercase;
+  font-size: 1.4em;
+}
+.brand a,
+.brand a:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#carousel{
+    width: 800px;   
+    height: 400px;
+    border: solid 4px #FFF;
+    box-shadow:  0 0 14px rgba(0,0,0,0.3);
+    position: relative;
+    overflow: hidden;
+
+
+}
+.photo{
+    width: 800px;
+    height: 400px;
+    margin: 0;
+    display: inline-block;
+    background-size: cover;
+}
+
+.carouselcontainer{
+    width: 800px;
+    height: 400px;
+}
+
+.carouselbouton{
+    position: absolute;
+    width: 70px;
+    cursor: pointer;
+    top: 150px;
+}
+
+#boutond{
+right: 0;
+opacity: 0.4;
+transform: rotate(0deg);
+transition: all 0.3 ease;
+
+}
+#boutong{
+    left: 0;
+    opacity: 0.4;
+    transform: rotate(180deg);
+    transition: all 0.3 ease;
+}
+
+#boutond:hover{
+    transform: rotate(0deg) scale(1.1);
+    opacity: 1;
+    transition: all 0.3 ease;
+}
+
+#boutong:hover{
+    transform: rotate(180deg) scale(1.1);
+    opacity: 1;
+    transition: all 0.3 ease;
+}
+
+
+
+
+.nav-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+                <img class="slide-img" src="https://www.codeur.com/tuto/wp-content/uploads/2021/12/slide2.jpg">
+                <div class="slide-text">Nullam luctus aliquam ornare. </div>
+            </div>
+            <div class="custom-slider fade">
+                <div class="slide-index">3 / 3</div>
+                <img class="slide-img" src="https://www.codeur.com/tuto/wp-content/uploads/2021/12/slide3.jpg">
+                <div class="slide-text">Praesent lobortis libero sed egestas suscipit.</div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
+        <br>
+        <div class="slide-dot">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </body>
+</html>
+HTML
+.custom-slider { display: none; }
+.slide-container {
+    max-width: 800px;
+    position: relative;
+    margin: auto;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    font-size: 30px;
+    background-color: rgba(0,0,0,0);
+    transition: background-color 0.6s ease;
+}
+.prev{ left: 15px; }
+.next { right: 15px; }
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.5);
+}
+.slide-text {
+    position: absolute;
+    color: #ffffff;
+    font-size: 15px;
+    padding: 15px;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+}
+.slide-index {
+    color: #ffffff;
+    font-size: 13px;
+    padding: 15px;
+    position: absolute;
+    top: 0;
+}
+.slide-img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+.slide-dot{ text-align: center; }
+.dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: #999999;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active, .dot:hover { background-color: #111111; }
+.fade {
+    animation-name: fade;
+    animation-duration: 1s;
+}
+@keyframes fade {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+nav {
+  float: right;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  float: left;
+  position: relative;
+}
+
+nav ul li a,
+nav ul li a:visited {
+  display: block;
+  padding: 0 20px;
+  line-height: 70px;
+  color: black;
+  text-transform: uppercase;
+
+
+  text-decoration: none;
+  margin-top:10px;
+}
+nav ul li a:hover,
+nav ul li a:visited:hover {
+  color: black;
+
+}
+nav ul li a:not(:only-child):after,
+nav ul li a:visited:not(:only-child):after {
+  padding-left: 4px;
+  content: " ▾";
+}
+nav ul li ul li {
+  min-width: 190px;
+}
+nav ul li ul li a {
+  padding: 15px;
+  line-height: 20px;
+}
+
+.nav-dropdown {
+  position: absolute;
+  display: none;
+  z-index: 1;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile navigation */
+.nav-mobile {
+  display: none;
+  margin-top:10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: linear-gradient(90deg, #4458dc 0%, #854fee 100%);;
+  height: 70px;
+  width: 70px;
+}
+
+
+
+@media only screen and (max-width: 798px) {
+
+
+
+
+  .nav-mobile {
+    display: block;
+  }
+
+  nav {
+    width: 100%;
+    padding: 70px 0 15px;
+  }
+  nav ul {
+    display: none;
+  }
+  nav ul li {
+    float: none;
+  }
+
+  nav ul li a {
+    padding: 15px;
+    line-height: 20px;
+  }
+
+  nav ul li ul li a {
+    padding-left: 30px;
+  }
+
+  .nav-dropdown {
+    position: static;
+  }
+}
+
+
+/*   MEDIA SCREEN MIN 799 - BEGIN  */
+
+@media screen and (min-width: 799px) {
+  .nav-list {
+    display: block !important;
+  }
+}
+
+/*   MEDIA SCREEN MIN 799 - END    */
+
+
+
+#nav-toggle {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+}
+
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: #ffffff;
+  position: absolute;
+  display: block;
+  content: "";
+  transition: all 300ms ease-in-out;
+}
+
+#nav-toggle span:before {
+  top: -10px;
+}
+
+#nav-toggle span:after {
+  bottom: -10px;
+}
+
+#nav-toggle.active span {
+  background-color: transparent;
+}
+
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
+
+article {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+
+html, body{
+    margin: 0%;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+/*.header-fixed{
+  position:fixed;
+  z-index:3000;
+  background:white;
+  right:0;
+  left:0;
+  top:0;
+}*/
+/* Global Classes */
+
+.title-text{
+    font: normal bold 50px/ 72px var(--roboto);
+}
+
+.text-uppercase{
+    text-transform: uppercase;
+}
+
+.project_title {
+   text-transform: uppercase;
+   height: 50px;
+}
+
+
+/* Buttons */
+
+.button{
+    padding: .8rem 2.2rem;
+    font: normal 500 16px/20px var(--roboto);
+    position: relative;
+    border: 3px solid transparent;
+    border-radius: 4px;
+}
+
+.button.primary-button{
+    background: red;
+    background-clip: padding-box;
+    color: whitesmoke;
+    transition: background .6s ease;
+    box-shadow: var(--box-shadow);
+}
+
+.button.primary-button:hover{
+    background: whitesmoke;
+    background-clip: padding-box;
+    color: black;
+}
+
+.button.primary-button::after, .button.secondary-button::after{
+    position: absolute;
+    top: -2px; left: -2px;
+    bottom: -2px;  right: -2px;
+    background: var(--gradient-color);
+    content: ' ';
+    z-index: -1;
+    border-radius: 4px;
+}
+
+.button.secondary-button{
+    background: white;
+    background-clip: padding-box;
+    transition: background .6s ease;
+}
+
+.button.secondary-button:hover{
+    background: red;
+    color: whitesmoke;
+    box-shadow: var(--box-shadow);
+}
+
+p.para{
+    color: var(--text-color);
+    font: normal 500 16px/ 25px;
+    font-family:'Roboto', cursive;
+}
+
+.font-roboto{
+    font-family: var(--roboto);
+}
+
+button:focus,
+button:active
+button:hover
+.btn:active,
+.btn.active{
+    outline: 0px !important;
+    box-shadow: none !important;
+}
+
+.title-h1{
+    font: normal bold 39px/ 40px var(--roboto);
+}
+
+.navbar_fixed{
+    position: fixed;
+    width: 100%;
+    top: -1px;
+    left: 0; right: 0;
+    background: #ffffff;
+    box-shadow: var(--box-shadow);
+    z-index: 999;
+    transition: background 1s ease;
+}
+
+/* CSS Variables */
+
+:root{
+    --primary-color: #4458dc;
+    --primary-color2: #854fee;
+    --title-color: #141313;
+    --text-color: #777777;
+    --border-color: #201f1f17;
+    --gradient-color: linear-gradient(90deg, #4458dc 0%, #854fee 100%);
+    --shadow-color:  0px 10px 30px rgba(118, 85, 225, 0.3);
+    --box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
+
+
+    /* font family variables. */
+    --roboto: 'Roboto', cursive;
+}
+
+
+/* start navigation */
+
+.header_area .main-menu .navbar .navbar-brand{
+    padding: 0 2rem 0 5rem;
+}
+
+.header_area .main-menu .navbar{
+    padding: 1rem 20rem ;
+}
+
+.header_area .main-menu .nav-item .nav-link{
+    font: normal 500 15px/2px
+    font-family:'Roboto', cursive;
+    text-transform: uppercase;
+    padding: 1.7rem;
+    color: var(--title-color);
+}
+
+.header_area .main-menu .navbar-nav .active a{
+    background: var(--gradient-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.header_area .main-menu .navbar-nav a:hover{
+    background: var(--gradient-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+
+/* end navigation */
+
+/* Banner Area */
+
+.site-main .site-banner {
+    background: url(../img/banner/home-banner.png) no-repeat 0% 50%;
+}
+
+#scrollToTop{
+    cursor: pointer;
+    font-size: 0.9em;
+    position: fixed;
+    text-align: center;
+    z-index: 9999;
+    -webkit-transition: background-color 0.2s ease-in-out;
+    -moz-transition: background-color 0.2s ease-in-out;
+    -ms-transition: background-color 0.2s ease-in-out;
+    -o-transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
+    background: #686868;
+    color: #ffffff;
+    border-radius: 3px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    right: 20px;
+    bottom: 20px;
+}
+
+
+.site-main .site-banner .site-title h1{
+    font-size: 4rem;
+}
+
+.site-main .site-banner .site-title h4{
+    font-size: 1.5rem;
+}
+
+/* End Banner Area */
+
+/* Start About Area */
+
+.site-main .about-area{
+    padding: 2rem 0rem;
+    margin-top:70px;
+}
+
+.site-main .about-area .about-title h2 > span{
+    display: block;
+    font: normal bold 49px/ 60px var(--roboto);
+    letter-spacing: 15px;
+}
+
+.site-main .about-area .about-title .paragraph > p{
+    padding: .4rem 0;
+}
+
+/* End About Area */
+
+
+/* Start Brand Area */
+
+.site-main .brand-area{
+    padding: 1rem 20rem;
+    margin-bottom: 4rem;
+}
+
+.site-main .brand-area .first-row .col-lg-4{
+    display: flex;
+    justify-content: center;
+}
+
+.site-main .brand-area .first-row .col-lg-4 > .single-brand{
+    border: 1px solid var(--border-color);
+    text-align: center;
+    padding: 1.8rem 0rem;
+    margin: .9rem 0;
+    width: 180px;
+    height: 100px;
+    cursor: pointer;
+    transition: transform .4s ease;
+}
+
+.site-main .brand-area .first-row .col-lg-4 > .single-brand > img{
+    width: 50%;
+}
+
+.site-main .brand-area .first-row .col-lg-4 > .single-brand:hover{
+    box-shadow: var(--box-shadow);
+    transform: scale(1.1);
+}
+
+.site-main .brand-area .first-row .col-lg-4 > .single-brand:hover > img{
+    filter: brightness(0.15);
+}
+
+.site-main .brand-area .experience-area{
+    /*padding-left: 1rem;*/
+}
+
+.site-main .brand-area .experience-area span{
+    display: block;
+}
+
+.site-main .brand-area .experience-area .years-area{
+    background: url(../img/client-info-bg.png) no-repeat 45px 20px;
+    padding: 2rem 0;
+    width: 40rem;
+    height: 18rem;
+    padding-left: 8rem;
+    position: relative;
+}
+
+.site-main .brand-area .experience-area .bg-panel{
+    position: absolute;
+    left: -190px; top: 0%;
+    background: #e029290a;
+    width: 400px;
+    height: 400px;
+    margin-left: 340px;
+    z-index: -1;
+}
+
+.site-main .brand-area .experience-area .years-area .years{
+    font: normal bold 84px/40px var(--roboto);
+    color: var(--primary-color2);
+    z-index: 2;
+}
+
+.site-main .brand-area .experience-area .years-area h2 > span{
+    font: normal 600 22px/30px var(--roboto);
+}
+
+.site-main .brand-area .experience-area .call-area{
+    padding-left: 10rem;
+}
+
+/* End Brand Area */
+
+/* Services Area */
+
+.site-main .services-area{
+    padding: 7rem 2rem;
+}
+
+.site-main .services-area .services-title{
+    padding: 0 14rem;
+}
+
+.site-main .services-area .services-title h1{
+    font-size: 35px;
+}
+
+.site-main > .services-area .services{
+    background: rgba(248, 252, 253, 0.973);
+    padding: 2rem 0;
+    width: 16rem;
+    margin: 5rem .5rem;
+    transition: box-shadow .7s ease;
+}
+
+.site-main > .services-area .services:hover{
+    box-shadow: var(--box-shadow);
+}
+
+/* End Services Area */
+
+
+/* Project Area */
+
+.site-main .project-area{
+    padding: 2rem 0;
+    background-color: #1E40A7;
+}
+
+.site-main .project-area .container{
+    
+    background-color: white;
+    width: 90%;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.site-main .project-area .button-group button{
+    background: transparent;
+    border: none;
+    font: normal 500 16px/130px var(--roboto);
+    text-transform: uppercase;
+}
+
+.site-main .project-area .button-group button + button{
+    padding-left: 3rem;
+}
+
+.site-main .project-area .grid .our-project > .title h4{
+    font: normal 700 25px/24px var(--roboto);
+}
+
+.proyecto:hover {
+    box-shadow:0px 0px 10px rgba(0,0,0,0.2)
+}
+/* End Project Area */
+
+
+/* About Me */
+
+.site-main .about-area .about-title p{
+    padding: 1rem 0rem;
+}
+
+.site-main .about-area .client{
+    background: #ffffff10;
+    box-shadow: var(--box-shadow);
+    margin: 3rem 0rem;
+}
+
+.site-main .about-area .client .client-img{
+    padding: 2rem;
+}
+
+.site-main .about-area .client .about-client{
+    padding-top: 2rem;
+}
+
+.site-main .about-area .client .about-client h4{
+    font: normal 500 21px/ 20px var(--roboto);
+}
+
+.site-main .about-area .client .about-client p{
+    font-size: 14px;
+}
+
+.site-main .about-area .owl-carousel .owl-item{
+    display: flex;
+    justify-content: center;
+    padding: 0 1.5rem;
+}
+
+.site-main .about-area .owl-carousel .owl-dots .owl-dot.active span{
+    background: var(--primary-color);
+    width: 12px;
+    height: 12px;
+}
+/* End About Me */
+
+/* Subscribe me */
+
+.site-main .subscribe-us-area .subscribe{
+    background: linear-gradient(90deg, #4458dc 0%, #854fee 100%) ;
+    padding: 10rem 0;
+    width:100%;
+    margin: 3rem auto;
+}
+
+.site-main .subscribe-us-area .subscribe .subscribe-title h4{
+    font: normal 700 30px/ 30px var(--roboto);
+    color: whitesmoke;
+}
+
+.site-main .subscribe-us-area .subscribe .subscribe-title p{
+    color: whitesmoke;
+    padding: 1rem 4rem;
+}
+
+.site-main .subscribe-us-area .subscribe form .input-textbox input{
+    width: 400px;
+    padding: 1.5rem 1rem;
+    border: 1px solid whitesmoke;
+    background: transparent;
+    color: white;
+    font: normal 500 17px/20px var(--roboto);
+}
+
+.site-main .subscribe-us-area .subscribe form .input-textbox input::placeholder{
+    color: whitesmoke;
+}
+
+.site-main .subscribe-us-area .subscribe form .btn-submit button{
+    background: whitesmoke;
+    color: #000;
+    padding: .7rem 2rem;
+}
+
+/* End subscribe me */
+
+/* Footer Area */
+
+footer.footer-area{
+    padding: 5rem 0;
+    background: url(../img/footer-bg.png) no-repeat;
+}
+
+footer.footer-area .social h5{
+    font: normal 500 23px/ 30px var(--roboto);
+}
+
+footer.footer-area .social a > i{
+    font-size:22px;
+    padding: 2rem;
+    color: var(--border-color);
+}
+
+footer.footer-area .social a:hover > i{
+    color: var(--primary-color);
+}

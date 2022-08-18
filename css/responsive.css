@@ -1,0 +1,245 @@
+/* if the viewport is equal to 340px or less than that */
+@media only screen and (max-width: 340px){
+    .header_area .main-menu .navbar,
+    .header_area .main-menu .navbar .navbar-brand,
+    .site-main .subscribe-us-area .subscribe .subscribe-title,
+    .site-main .subscribe-us-area .subscribe .subscribe-title p, h4,
+    .site-main .services-area,
+    .site-main .subscribe-us-area .subscribe
+    {
+        padding: 4%;
+        margin: 0%;
+    }
+ .site-main .site-banner{
+  width:100%;
+ }
+    .site-main .site-banner .site-title h1{
+        font-size: 35px;
+        line-height: 40px;
+    }
+     .site-main .site-banner .site-title h3{
+
+        margin-top:20px;
+    }
+
+    .site-main .subscribe-us-area .subscribe form .input-textbox input{
+        width: 15rem    !important;
+    }
+
+    .site-main > .services-area .services{
+        width: 13rem;
+    }
+
+   .site-main .site-banner .site-title h4 {
+
+    font-size:20px;
+   }
+
+   .certification img {
+    width:250px;
+   }
+   .site-main .site-banner .site-title h3{
+    padding-top: 35%;
+    font-weight: 500;
+}
+
+}
+
+@media only screen and (min-width: 341px) and (max-width:440px){
+
+  .banner-image img {
+      width: 50%;
+      position:absolute;
+      transform:translate(205px,-105px);
+  }
+}
+
+@media only screen and (min-width: 341px) and (max-width:799px){
+
+.site-banner .banner-image {
+  width:50%;
+  position:relative;
+  left:200px;
+}
+
+.certification img {
+    width:320px;
+   }
+
+.site-banner .site-title {
+}
+
+.site-main .site-banner .site-title h3{
+    padding-top: 35%;
+    font-weight: 500;
+}
+
+}
+
+
+
+/* if the viewport is equal to 340px or less than that */
+@media only screen and (max-width: 799px){
+
+    .site-banner .banner-image {
+      width:50%;
+      position:relative;
+      left:200px;
+    }
+
+    .site-main .site-banner .site-title h3{
+    padding-top: 35%;
+    font-weight: 500;
+}
+
+    .site-main .about-area .about-title h2 > span{
+        font-size: 31px;
+        letter-spacing: 10px;
+    }
+
+    .site-main .brand-area .experience-area .years-area{
+        padding-left: 1%;
+        width: 49%;
+    }
+
+    .site-main .brand-area .experience-area .bg-panel{
+        margin-left: 30%;
+        width: 80%;
+    }
+
+    .site-main .brand-area .experience-area .call-area{
+        padding-left: 3%;
+    }
+
+    .site-main .project-area .button-group button{
+        font: normal 500 18px/40px var(--roboto);
+    }
+
+    .site-main .about-area .about-title p{
+        padding: 0%;
+    }
+
+    .site-main .subscribe-us-area .subscribe form .input-textbox input{
+        width: 20rem;
+        margin: 5%;
+    }
+
+    #skills{
+      width:100%;
+    }
+
+
+}
+
+@media only screen and (min-width: 800px){
+
+  .site-banner .banner-image {
+      width: 50%;
+
+    }
+
+    .site-main .site-banner .site-title h3{
+    padding-top: 35%;
+    font-weight: 500;
+}
+
+    .certification img {
+        width:520px;
+       }
+    .site-title {
+    margin-top:0px;
+    }
+
+    .site-title h3{
+    font-size:50px;
+    }
+}
+
+@media only screen and (max-width: 990px){
+
+  #aboutusimg{
+    display:none;
+  }
+}
+
+@media only screen and (min-width: 991px){
+
+#aboutusimg {
+  display:none;
+}
+
+.banner-image {
+    padding: 3rem 10;
+    width: 40rem;
+    margin:0px 5px;
+}
+#servicesbuttons{
+    justify-content: center;
+}
+
+.site-main .site-banner .banner-image img{
+    padding: 5rem 0;
+    width: 20rem;
+    margin:100px 5px 0px 5px;
+    position:absolute;
+    float:left;
+
+}
+
+.site-main .site-banner .site-title h3{
+    padding-top: 24%;
+    font-weight: 500;
+    text-align: center;
+}
+
+
+.site-main .site-banner .site-title  {
+  height:400px;
+}
+
+.about-title {
+  padding:0px 5px;
+  width:70%;
+  margin:25px 0px 0px 50px;
+  max-width:550px;
+
+}
+
+#skills {
+  justify-content:center;
+}
+
+
+.header-fixed{
+  position:fixed;
+  z-index:3000;
+  background:white;
+  right:0;
+  left:0;
+  top:0;
+  height:132px;
+}
+
+.about-area {
+  display:flex;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+}
+/* if the viewport is equal to 1910px or less than that */
+@media only screen and (max-width: 1910px){
+    .header_area .main-menu .navbar{
+        padding: 1rem;
+    }
+
+
+
+    .site-main .brand-area,
+    .site-main .services-area .services-title,
+    .site-main .about-area{
+        padding: 3% 4%;
+    }
+
+
+}
