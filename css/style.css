@@ -34,15 +34,73 @@
   text-decoration: none;
 }
 
-#carousel{
-    width: 800px;   
-    height: 400px;
-    border: solid 4px #FFF;
-    box-shadow:  0 0 14px rgba(0,0,0,0.3);
-    position: relative;
-    overflow: hidden;
 
-
+.carousel {
+  padding: 20px;
+  perspective: 500px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.carousel > * {
+  flex: 0 0 auto;
+}
+.carousel figure {
+  margin: 0;
+  width: 400px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  transform-origin: 50% 50% -482.8427124746px;
+}
+.carousel figure img {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 40px;
+  opacity: 0.9;
+}
+.carousel figure img:not(:first-of-type) {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-origin: 50% 50% -482.8427124746px;
+}
+.carousel figure img:nth-child(2) {
+  transform: rotateY(0.7853981634rad);
+}
+.carousel figure img:nth-child(3) {
+  transform: rotateY(1.5707963268rad);
+}
+.carousel figure img:nth-child(4) {
+  transform: rotateY(2.3561944902rad);
+}
+.carousel figure img:nth-child(5) {
+  transform: rotateY(3.1415926536rad);
+}
+.carousel figure img:nth-child(6) {
+  transform: rotateY(3.926990817rad);
+}
+.carousel figure img:nth-child(7) {
+  transform: rotateY(4.7123889804rad);
+}
+.carousel figure img:nth-child(8) {
+  transform: rotateY(5.4977871438rad);
+}
+.carousel nav {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 0;
+}
+.carousel nav button {
+  flex: 0 0 auto;
+  margin: 0 5px;
+  cursor: pointer;
+  color: #333;
+  background: none;
+  border: 1px solid;
+  letter-spacing: 1px;
+  padding: 5px 10px;
+  margin-top: 150px;
 }
 .photo{
     width: 800px;
@@ -52,45 +110,6 @@
     background-size: cover;
 }
 
-.carouselcontainer{
-    width: 800px;
-    height: 400px;
-}
-
-.carouselbouton{
-    position: absolute;
-    width: 70px;
-    cursor: pointer;
-    top: 150px;
-}
-
-#boutond{
-right: 0;
-opacity: 0.4;
-transform: rotate(0deg);
-transition: all 0.3 ease;
-
-}
-#boutong{
-    left: 0;
-    opacity: 0.4;
-    transform: rotate(180deg);
-    transition: all 0.3 ease;
-}
-
-#boutond:hover{
-    transform: rotate(0deg) scale(1.1);
-    opacity: 1;
-    transition: all 0.3 ease;
-}
-
-#boutong:hover{
-    transform: rotate(180deg) scale(1.1);
-    opacity: 1;
-    transition: all 0.3 ease;
-}
-
-
 
 
 .nav-container {
@@ -98,95 +117,8 @@ transition: all 0.3 ease;
   margin: 0 auto;
 }
 
-                <img class="slide-img" src="https://www.codeur.com/tuto/wp-content/uploads/2021/12/slide2.jpg">
-                <div class="slide-text">Nullam luctus aliquam ornare. </div>
-            </div>
-            <div class="custom-slider fade">
-                <div class="slide-index">3 / 3</div>
-                <img class="slide-img" src="https://www.codeur.com/tuto/wp-content/uploads/2021/12/slide3.jpg">
-                <div class="slide-text">Praesent lobortis libero sed egestas suscipit.</div>
-            </div>
-            <a class="prev" onclick="plusSlides(-1)">❮</a>
-            <a class="next" onclick="plusSlides(1)">❯</a>
-        </div>
-        <br>
-        <div class="slide-dot">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-        </div>
-    </body>
-</html>
-HTML
-.custom-slider { display: none; }
-.slide-container {
-    max-width: 800px;
-    position: relative;
-    margin: auto;
-}
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    color: white;
-    font-size: 30px;
-    background-color: rgba(0,0,0,0);
-    transition: background-color 0.6s ease;
-}
-.prev{ left: 15px; }
-.next { right: 15px; }
-.prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.5);
-}
-.slide-text {
-    position: absolute;
-    color: #ffffff;
-    font-size: 15px;
-    padding: 15px;
-    bottom: 15px;
-    width: 100%;
-    text-align: center;
-}
-.slide-index {
-    color: #ffffff;
-    font-size: 13px;
-    padding: 15px;
-    position: absolute;
-    top: 0;
-}
-.slide-img{
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    object-position: center;
-}
-.slide-dot{ text-align: center; }
-.dot {
-    cursor: pointer;
-    height: 10px;
-    width: 10px;
-    margin: 0 2px;
-    background-color: #999999;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-.active, .dot:hover { background-color: #111111; }
-.fade {
-    animation-name: fade;
-    animation-duration: 1s;
-}
-@keyframes fade {
-    from {opacity: 0}
-    to {opacity: 1}
-}
+             
+
 
 nav {
   float: right;
@@ -247,7 +179,7 @@ nav ul li ul li a {
   position: absolute;
   top: 0;
   right: 0;
-  background: linear-gradient(90deg, #4458dc 0%, #854fee 100%);;
+  background: #14153C;
   height: 70px;
   width: 70px;
 }
@@ -395,39 +327,33 @@ html, body{
 }
 
 .button.primary-button{
-    background: red;
+    background: #F90814;
     background-clip: padding-box;
-    color: whitesmoke;
     transition: background .6s ease;
-    box-shadow: var(--box-shadow);
+    box-shadow: white;
+    color: white;
 }
 
 .button.primary-button:hover{
-    background: whitesmoke;
-    background-clip: padding-box;
-    color: black;
+    background: #F90814;
+    color: whitesmoke;
+    box-shadow: white;
 }
 
-.button.primary-button::after, .button.secondary-button::after{
-    position: absolute;
-    top: -2px; left: -2px;
-    bottom: -2px;  right: -2px;
-    background: var(--gradient-color);
-    content: ' ';
-    z-index: -1;
-    border-radius: 4px;
-}
+
 
 .button.secondary-button{
-    background: white;
+    background: #14153C;
     background-clip: padding-box;
     transition: background .6s ease;
+    box-shadow: white;
+    color: white;
 }
 
 .button.secondary-button:hover{
-    background: red;
+    background: #14153C;
     color: whitesmoke;
-    box-shadow: var(--box-shadow);
+    box-shadow: white;
 }
 
 p.para{
@@ -659,6 +585,7 @@ button:hover
 
 .site-main .services-area{
     padding: 7rem 2rem;
+    background: #0f1147;
 }
 
 .site-main .services-area .services-title{
@@ -672,7 +599,7 @@ button:hover
 .site-main > .services-area .services{
     background: rgba(248, 252, 253, 0.973);
     padding: 2rem 0;
-    width: 16rem;
+    width: 26rem;
     margin: 5rem .5rem;
     transition: box-shadow .7s ease;
 }
@@ -688,7 +615,7 @@ button:hover
 
 .site-main .project-area{
     padding: 2rem 0;
-    background-color: #1E40A7;
+    background-color: whitesmoke;
 }
 
 .site-main .project-area .container{
@@ -764,7 +691,7 @@ button:hover
 /* Subscribe me */
 
 .site-main .subscribe-us-area .subscribe{
-    background: linear-gradient(90deg, #4458dc 0%, #854fee 100%) ;
+    background: #14153C;
     padding: 10rem 0;
     width:100%;
     margin: 3rem auto;
