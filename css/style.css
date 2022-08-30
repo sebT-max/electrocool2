@@ -102,6 +102,29 @@
   padding: 5px 10px;
   margin-top: 150px;
 }
+
+.slideshow {
+   width: 850px;
+   height: 200px;
+   overflow: hidden;
+   border: 3px solid #F2F2F2;
+}
+
+.slideshow ul {
+    /* 4 images donc 4 x 100% */
+   width: 400%;
+   height: 200px;
+   padding:0; margin:0;
+   list-style: none;
+}
+.slideshow li {
+   float: left;
+}
+
+
+
+
+
 .photo{
     width: 800px;
     height: 400px;
@@ -110,6 +133,15 @@
     background-size: cover;
 }
 
+.m-10 {
+margin: 10px;
+}
+
+.brochures {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
 
 .nav-container {
@@ -117,8 +149,10 @@
   margin: 0 auto;
 }
 
-             
-
+h4 {
+font-size: 20px;
+margin: 0 auto;
+}  
 
 nav {
   float: right;
@@ -184,54 +218,10 @@ nav ul li ul li a {
   width: 70px;
 }
 
-
-
-@media only screen and (max-width: 798px) {
-
-
-
-
-  .nav-mobile {
-    display: block;
-  }
-
-  nav {
-    width: 100%;
-    padding: 70px 0 15px;
-  }
-  nav ul {
-    display: none;
-  }
-  nav ul li {
-    float: none;
-  }
-
-  nav ul li a {
-    padding: 15px;
-    line-height: 20px;
-  }
-
-  nav ul li ul li a {
-    padding-left: 30px;
-  }
-
-  .nav-dropdown {
-    position: static;
-  }
+#providers {
+    display: flex;
+    justify-content: center;
 }
-
-
-/*   MEDIA SCREEN MIN 799 - BEGIN  */
-
-@media screen and (min-width: 799px) {
-  .nav-list {
-    display: block !important;
-  }
-}
-
-/*   MEDIA SCREEN MIN 799 - END    */
-
-
 
 #nav-toggle {
   position: absolute;
@@ -340,6 +330,14 @@ html, body{
     box-shadow: white;
 }
 
+.serv-list1{
+    background: #F90814;
+    background-clip: padding-box;
+    transition: background .6s ease;
+    box-shadow: white;
+    color: white;
+}
+
 
 
 .button.secondary-button{
@@ -354,6 +352,24 @@ html, body{
     background: #14153C;
     color: whitesmoke;
     box-shadow: white;
+}
+
+.serv-list2{
+    background: #14153C;
+    background-clip: padding-box;
+    transition: background .6s ease;
+    box-shadow: white;
+    color: white;
+}
+
+
+
+.brochure {
+    color: grey;
+    background: white;
+    border: lightgrey;
+    padding:10px;
+    width:200px;"
 }
 
 p.para{
@@ -409,7 +425,12 @@ button:hover
 
 
 /* start navigation */
-
+.navbar-brand {
+    position:static;
+    z-index:3000;
+    background:white;
+    height:200px;
+}
 .header_area .main-menu .navbar .navbar-brand{
     padding: 0 2rem 0 5rem;
 }
@@ -599,7 +620,7 @@ button:hover
 .site-main > .services-area .services{
     background: rgba(248, 252, 253, 0.973);
     padding: 2rem 0;
-    width: 26rem;
+    width: auto;
     margin: 5rem .5rem;
     transition: box-shadow .7s ease;
 }
@@ -641,9 +662,7 @@ button:hover
     font: normal 700 25px/24px var(--roboto);
 }
 
-.proyecto:hover {
-    box-shadow:0px 0px 10px rgba(0,0,0,0.2)
-}
+
 /* End Project Area */
 
 

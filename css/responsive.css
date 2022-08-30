@@ -39,18 +39,31 @@
     width:250px;
    }
    .site-main .site-banner .site-title h3{
-    padding-top: 35%;
+    padding-top: 15%;
     font-weight: 500;
 }
 
 }
 
+
+
 @media only screen and (min-width: 341px) and (max-width:440px){
 
   .banner-image img {
-      width: 50%;
-      position:absolute;
-      transform:translate(205px,-105px);
+      width: 100%;
+      margin:0 auto;
+  }
+
+  .html {
+    margin: 0 auto;
+  }
+
+  .service2{
+    margin-top: 100px;
+    border: 1px solid black;
+  }
+  .about-title h2 {
+    margin-top: 50px;
   }
 }
 
@@ -61,17 +74,25 @@
   position:relative;
   left:200px;
 }
+.about-title h2 {
+    margin-top: 50px;
+  }
 
 .certification img {
     width:320px;
    }
 
 .site-banner .site-title {
+    margin: 0 auto;
 }
 
 .site-main .site-banner .site-title h3{
-    padding-top: 35%;
+    padding-top: 15%;
     font-weight: 500;
+}
+
+.services {
+    margin-bottom: 100px;
 }
 
 }
@@ -81,6 +102,10 @@
 /* if the viewport is equal to 340px or less than that */
 @media only screen and (max-width: 799px){
 
+    #servicesbuttons{
+        justify-content: center;
+    }
+
     .site-banner .banner-image {
       width:50%;
       position:relative;
@@ -88,8 +113,9 @@
     }
 
     .site-main .site-banner .site-title h3{
-    padding-top: 35%;
+    padding-top: 15%;
     font-weight: 500;
+    text-align: center;
 }
 
     .site-main .about-area .about-title h2 > span{
@@ -128,7 +154,52 @@
       width:100%;
     }
 
+}
+/*   MEDIA SCREEN MIN 799 - BEGIN  */
 
+@media screen and (min-width: 799px) {
+  .nav-list {
+    display: block !important;
+  }
+
+}
+
+/*   MEDIA SCREEN MIN 799 - END    */
+
+
+
+@media only screen and (max-width: 798px) {
+
+
+
+
+  .nav-mobile {
+    display: block;
+  }
+
+  nav {
+    width: 100%;
+    padding: 70px 0 15px;
+  }
+  nav ul {
+    display: none;
+  }
+  nav ul li {
+    float: none;
+  }
+
+  nav ul li a {
+    padding: 15px;
+    line-height: 20px;
+  }
+
+  nav ul li ul li a {
+    padding-left: 30px;
+  }
+
+  .nav-dropdown {
+    position: static;
+  }
 }
 
 @media only screen and (min-width: 800px){
@@ -139,7 +210,7 @@
     }
 
     .site-main .site-banner .site-title h3{
-    padding-top: 35%;
+    padding-top: 15%;
     font-weight: 500;
 }
 
@@ -152,7 +223,12 @@
 
     .site-title h3{
     font-size:50px;
+    text-align: center;
     }
+
+    #servicesbuttons{
+    justify-content: center;
+}
 }
 
 @media only screen and (max-width: 990px){
@@ -187,7 +263,7 @@
 }
 
 .site-main .site-banner .site-title h3{
-    padding-top: 24%;
+    padding-top: 15%;
     font-weight: 500;
     text-align: center;
 }
@@ -226,14 +302,13 @@
   justify-content: center;
 }
 
+
 }
 /* if the viewport is equal to 1910px or less than that */
 @media only screen and (max-width: 1910px){
     .header_area .main-menu .navbar{
         padding: 1rem;
     }
-
-
 
     .site-main .brand-area,
     .site-main .services-area .services-title,
